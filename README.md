@@ -9,7 +9,10 @@ Udacity: Programming for Data Science with Python.
 ### Description
 Bikeshare project to learn how to use python and git. 
 
-Change 1 for project.
+Change 1 for project part 3. 
+
+Change 2 for project part 2.
+Change 3 for project part 2. 
 
 ### Files used
 01/05/2023  06:16 PM                58 .gitignore
