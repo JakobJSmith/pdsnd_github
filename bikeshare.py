@@ -30,11 +30,11 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
 
-    month = get_user_input('\nThanks! Please provide a month from the following list: January, February, March, April, May, June\nOr \"all\" to apply no month filter.\n>', MONTHS)
+    month = get_user_input('\nThanks! Please provide a month from the following list: January, February, March, April, May, June\nOr \"all\" to apply no month filter.\n>', MONTHS).strip()
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
 
-    day = get_user_input('\nThanks! Please provide a day to analyze.\nOr \"all\" to apply no day filter.\n>', DAYS)
+    day = get_user_input('\nThanks! Please provide a day to analyze.\nOr \"all\" to apply no day filter.\n>', DAYS).strip()
     
     print('\nGreat!\nYou selected: '+city+', '+month+', '+day)
     print('-'*40)
