@@ -32,11 +32,11 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
 
-    month = get_user_input('\nThanks! Please provide a month from the following list: January, February, March, April, May, June\nOr \"all\" to apply no month filter.\n>', MONTHS)
+    month = get_user_input('\nThanks! Please provide a month from the following list: January, February, March, April, May, June\nOr \"all\" to apply no month filter.\n>', MONTHS).strip()
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
 
-    day = get_user_input('\nThanks! Please provide a day to analyze.\nOr \"all\" to apply no day filter.\n>', DAYS)
+    day = get_user_input('\nThanks! Please provide a day to analyze.\nOr \"all\" to apply no day filter.\n>', DAYS).strip()
     
     print('\nGreat!\nYou selected: '+city+', '+month+', '+day)
     print('-'*40)
@@ -215,6 +215,13 @@ def display_table_data(df):
             additional_data = input('Would you like to see more? Enter yes if so.\n>').lower()
             if additional_data not in ('yes', 'y'):
                 break
+# An alternate way to display raw data is using the .sample() method of a dataframe. If you wanted to display 5 sample rows from the dataframe to the user, in a while loop that also asks the user for input would be:
+"""    while True:
+    print(df.sample(5))
+    view_more = input("Do you want to see more raw data? Type 'yes' to see more")
+    if view_more != "yes":
+        break
+"""
     
 
 def main():
@@ -228,7 +235,7 @@ def main():
         user_stats(df)
         display_table_data(df)
 
-        restart = input('\nWould you like to restart? Enter yes if so.\n>')
+        restart = input('\nWould you like to restart? Enter yes if so.\n>').strip()
         if restart.lower() != 'yes':
             break
 
