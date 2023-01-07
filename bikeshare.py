@@ -213,6 +213,13 @@ def display_table_data(df):
             additional_data = input('Would you like to see more? Enter yes if so.\n>').lower()
             if additional_data not in ('yes', 'y'):
                 break
+# An alternate way to display raw data is using the .sample() method of a dataframe. If you wanted to display 5 sample rows from the dataframe to the user, in a while loop that also asks the user for input would be:
+"""    while True:
+    print(df.sample(5))
+    view_more = input("Do you want to see more raw data? Type 'yes' to see more")
+    if view_more != "yes":
+        break
+"""
     
 
 def main():
